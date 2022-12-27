@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        
         _rigidBody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
@@ -62,7 +63,6 @@ public class PlayerController : MonoBehaviour
     private void OnMouseDown()
     {
         _isDragging = true;
-        SetPlayerColor(Color.red);
     }
 
     private void OnMouseUp()
@@ -75,7 +75,6 @@ public class PlayerController : MonoBehaviour
         }
         
         AddForceToPlayerMovement();
-        SetPlayerColor(Color.white);
     }
 
     private void OnMouseDrag()
@@ -92,11 +91,6 @@ public class PlayerController : MonoBehaviour
     private void SetKinematic(bool shouldUseKinematic)
     {
         _rigidBody.isKinematic = shouldUseKinematic;
-    }
-
-    private void SetPlayerColor(Color currentColor)
-    {
-        _spriteRenderer.color = currentColor;
     }
 
     private void AddForceToPlayerMovement()
