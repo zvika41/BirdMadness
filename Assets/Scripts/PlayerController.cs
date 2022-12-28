@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
     #region --- Members ---
 
     private Rigidbody2D _rigidBody;
-    private SpriteRenderer _spriteRenderer;
     private Camera _camera;
     private Vector2 _startPosition;
     private Vector2 _mousePosition;
@@ -42,9 +41,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        
         _rigidBody = GetComponent<Rigidbody2D>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
         _camera = Camera.main;
     }

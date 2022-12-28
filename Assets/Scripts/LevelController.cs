@@ -54,7 +54,7 @@ public class LevelController : MonoBehaviour
 
     private void HandleNextLevel()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (SceneManager.GetActiveScene().buildIndex == 9)
         {
 #if UNITY_EDITOR
             EditorApplication.ExitPlaymode();
